@@ -1,0 +1,296 @@
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.html,
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--charcoal-grey);
+}
+
+.main {
+  background-color: rgb(255, 255, 255);
+  color: var(--charcoal-grey);
+  display: flex;
+  width: 92.8rem;
+  padding: 2.5rem 2.5rem 2rem;
+  border-radius: 35px;
+}
+
+.newsletter {
+  padding-left: 3.9rem;
+  padding-right: 6.5rem;
+}
+
+.heading {
+  color: var(--dark-slate-grey);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 5.4rem;
+  letter-spacing: 1px;
+}
+
+.newsletter__heading {
+  margin-top: 6.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.newsletter__paragraph {
+  margin-bottom: 2.5rem;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.list-element {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-text {
+  font-size: 1.61rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.2rem;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.form__input {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--dark-slate-grey);
+  padding: 1.7rem 2.3rem;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 2.3rem;
+}
+
+.form__input:hover {
+  cursor: pointer;
+  outline: black;
+  border: 1px solid black;
+}
+
+.form__input::placeholder {
+  color: var(--grey);
+}
+
+/* Error states */
+
+.form__error-msg {
+  position: absolute;
+  color: var(--tomato);
+  right: 0;
+}
+.form__input-error {
+  background-color: #ffe8e6;
+  color: var(--tomato);
+  border-color: var(--tomato);
+}
+
+.form__input-error:focus,
+.form__input-error:hover {
+  color: var(--dark-slate-grey);
+}
+
+/*  Button */
+.form__button {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 1.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--dark-slate-grey);
+  color: white;
+}
+
+.form__button:hover {
+  background-color: var(--tomato);
+  background: linear-gradient(90deg, #ff5967, #ff693a);
+  cursor: pointer;
+}
+
+/* Success message div and modifiers */
+
+.main__success-width {
+  width: 50.5rem;
+}
+
+.success {
+  padding-left: 3.9rem;
+  padding-right: 3.9rem;
+  padding-top: 2.1rem;
+  padding-bottom: 4.4rem;
+}
+
+.success__image {
+  margin-bottom: 4.2rem;
+}
+
+.success__heading {
+  line-height: 1;
+  margin-bottom: 2.6rem;
+}
+
+.success__paragraph {
+  margin-bottom: 4.1rem;
+}
+
+.success__button {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Attribution */
+
+.footer {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.footer__attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.footer__link {
+  color: var(--tomato);
+}
+
+@media (max-width: 61.25em) {
+  .page {
+    height: auto;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+    max-height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .main__success-width,
+  .main {
+    width: 100%;
+    max-width: 98rem;
+    padding: 0 0 2rem 0;
+    border-radius: 0;
+  }
+
+  .image-sign-up {
+    content: url("assets/images/illustration-sign-up-mobile.svg");
+    width: 100%;
+    max-width: 60rem;
+  }
+  .image-container {
+    text-align: center;
+    width: 100%;
+  }
+
+  .newsletter {
+    padding: 2.5rem;
+  }
+
+  .heading {
+    font-size: 4rem;
+    letter-spacing: -0.25px;
+  }
+
+  .newsletter__heading {
+    margin-top: 0.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .newsletter__paragraph {
+    margin-bottom: 2.5rem;
+  }
+
+  .list-container {
+    gap: 1rem;
+  }
+
+  .list-element {
+    align-items: flex-start;
+  }
+
+  .list-text {
+    line-height: 1.5;
+  }
+
+  .form {
+    margin-top: 4rem;
+  }
+
+  .footer {
+    bottom: -10rem;
+    padding-bottom: 5rem;
+  }
+
+  .newsletter,
+  .success {
+    max-width: 60rem;
+    height: 100vh;
+  }
+
+  .success {
+    padding-inline: 2rem;
+  }
+
+  .success__image {
+    margin-top: 5rem;
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  .success__button {
+    margin-top: 20rem;
+  }
+}
